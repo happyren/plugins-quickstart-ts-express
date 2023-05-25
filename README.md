@@ -30,3 +30,5 @@ The plugin should now be installed and enabled! You can start with a question li
 
 - Styling with [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/)
 - Strict typing (removing `any` introduced by typescript) with [`ts-reset`](https://github.com/total-typescript/ts-reset)
+- Testing with [`Jest`](https://jestjs.io/docs/25.x/getting-started) configured with sample test
+- [`Github Actions`](https://docs.github.com/en/actions) configured with test

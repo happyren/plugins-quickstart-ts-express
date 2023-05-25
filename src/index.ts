@@ -3,7 +3,6 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import fs from "fs";
-import path from "path";
 
 dotenv.config();
 const app = express();
@@ -14,7 +13,7 @@ app.use(cors({
 }));
 app.use(express.json());
 
-const todo: Record<string, any[]> = {};
+const todo: Record<string, unknown[]> = {};
 
 // app routes
 app.post("/todos/:username", async (req: Request, res: Response) => {
