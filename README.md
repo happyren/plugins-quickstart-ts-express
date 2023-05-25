@@ -25,3 +25,8 @@ Once the local server is running:
 5. Enter in `localhost:5003` since this is the URL the server is running on locally, then select "Find manifest file".
 
 The plugin should now be installed and enabled! You can start with a question like "What is on my todo list" and then try adding something to it as well! 
+
+## Libraries
+
+- Styling with [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/)
+- Strict typing (removing `any` introduced by typescript) with [`ts-reset`](https://github.com/total-typescript/ts-reset)
