@@ -25,3 +25,11 @@ Once the local server is running:
 5. Enter in `localhost:5003` since this is the URL the server is running on locally, then select "Find manifest file".
 
 The plugin should now be installed and enabled! You can start with a question like "What is on my todo list" and then try adding something to it as well! 
+
+## Libraries
+
+- Styling with [`eslint`](https://eslint.org/) and [`prettier`](https://prettier.io/)
+- Strict typing (removing `any` introduced by typescript) with [`ts-reset`](https://github.com/total-typescript/ts-reset)
+- Testing with [`Jest`](https://jestjs.io/docs/25.x/getting-started) configured with sample test
+- [`Github Actions`](https://docs.github.com/en/actions) configured with test
+- Service observability with [`OpenTelemetry`](https://opentelemetry.io/) and [`Jaeger`](https://www.jaegertracing.io/download/) ([sample from OTEL](https://opentelemetry.io/docs/instrumentation/js/exporters/))

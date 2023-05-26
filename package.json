@@ -4,22 +4,43 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "start": "npx tsc && node dist/index.js"
+    "start": "npx ts-node --require ./src/utils/instrumentation.ts src/index.ts",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@opentelemetry/api": "^1.4.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.37.0",
+    "@opentelemetry/exporter-metrics-otlp-proto": "^0.39.1",
+    "@opentelemetry/exporter-trace-otlp-proto": "^0.39.1",
+    "@opentelemetry/instrumentation-express": "^0.32.3",
+    "@opentelemetry/instrumentation-http": "^0.39.1",
+    "@opentelemetry/resources": "^1.13.0",
+    "@opentelemetry/sdk-metrics": "^1.13.0",
+    "@opentelemetry/sdk-node": "^0.39.1",
+    "@opentelemetry/semantic-conventions": "^1.13.0",
+    "@total-typescript/ts-reset": "^0.4.2",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "helmet": "^7.0.0"
+    "helmet": "^7.0.0",
+    "ts-node": "^10.9.1"
   },
   "devDependencies": {
+    "@jest/globals": "^29.5.0",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.1",
     "@types/node": "^20.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.7",
+    "@typescript-eslint/parser": "^5.59.7",
+    "eslint": "^8.41.0",
+    "jest": "^29.5.0",
     "nodemon": "^2.0.22",
+    "prettier": "2.8.8",
+    "ts-jest": "^29.1.0",
     "typescript": "^5.0.4"
   }
 }
