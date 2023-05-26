@@ -32,3 +32,4 @@ The plugin should now be installed and enabled! You can start with a question li
 - Strict typing (removing `any` introduced by typescript) with [`ts-reset`](https://github.com/total-typescript/ts-reset)
 - Testing with [`Jest`](https://jestjs.io/docs/25.x/getting-started) configured with sample test
 - [`Github Actions`](https://docs.github.com/en/actions) configured with test
+- Service observability with [`OpenTelemetry`](https://opentelemetry.io/) and [`Jaeger`](https://www.jaegertracing.io/download/) ([sample from OTEL](https://opentelemetry.io/docs/instrumentation/js/exporters/))
