@@ -3,6 +3,18 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import helmet from "helmet";
 import fs from "fs";
+import { auth } from "express-openid-connect";
+
+dotenv.config();
+
+const config = {
+  authRequired: false,
+  auth0Logout: true,
+  secret: process.env.AUTH0_SECRET || '',
+  baseURL: 'http://localhost:5003',
+  clientID: process.env.AUTH0_CLIENT_ID || '',
+  issuerBaseURL: process.env.AUTH0_ISSUER_BASEURL || '',
+};
 
 dotenv.config();
 const app = express();
@@ -12,6 +24,12 @@ app.use(cors({
   origin: "https://chat.openai.com",
 }));
 app.use(express.json());
+
+app.use(auth(config));
+
+app.get('/', (req, res) => {
+  res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+});
 
 const todo: Record<string, unknown[]> = {};
 
