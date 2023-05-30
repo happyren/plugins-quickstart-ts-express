@@ -1,3 +1,5 @@
+![img](https://github.com/happyren/plugins-quickstart-ts-express/assets/11085242/2baf9b3e-16d2-4bb5-b99b-8e8810df4ab5)
+
 ###
 
 Template to kick start chatgpt plugin dev with node.js, typescript, and express.
